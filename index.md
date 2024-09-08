@@ -1,8 +1,10 @@
 ---
-layout: home
+layout: default
 title: Home
 ---
 
-# Welcome to My Portfolio
+# Welcome to My AI/ML Portfolio
 
-This is the homepage of my AI/ML portfolio.
+Here are my projects:
+
+- [Histopathology Image Cancer Classification](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
