@@ -3,8 +3,8 @@ layout: default
 title: Home
 ---
 
-# Welcome to My AI/ML Portfolio
+# Projects:
 
-Here are my projects:
-
-- [Histopathology Image Cancer Classification](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
+- Histopathology Image Cancer Classification
+	- [View the codebase](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
+	- [View the report] (https://github.com/rfdspeng/rfdspeng.github.io/blob/main/pages/mhist.md)
