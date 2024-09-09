@@ -3,9 +3,11 @@ layout: default
 title: Home
 ---
 
-# Projects:
+This website is a work-in-progress, as are the projects.
 
-- Histopathology Image Cancer Classification
-	- [Code repo (see README)](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
-	- [Report](https://rfdspeng.github.io/pages/mhist)
-	
+# Projects
+
+* **Histopathology Image Cancer Classification**
+	* Classify histopathology images of colorectal polyps as benign or precancerous
+	* [Code repo](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
+	* [Report](https://rfdspeng.github.io/pages/mhist)
