@@ -5,11 +5,14 @@ title: Histopathology Image Classification
 
 # Histopathology Image Classification
 
-![Histopathology image](https://pathologyoutlines.com/imgau/colontumorsessileserratedmicro01.jpg)
+![SSA image](../assets/image/mhist_ssa_img.jpg)
+[Image source](https://commons.wikimedia.org/wiki/File:Sessile_serrated_adenoma_3_intermed_mag.jpg)
 
 [Original paper - A Petri Dish for Histopathology Image Analysis (2021)](https://arxiv.org/abs/2101.12355)
 
 This is my first deep learning and computer vision project. I've summarized the project below, and you can [download my full report here.](../assets/pdf/MHIST%20Project%20Report.pdf)
+
+You can [find the code repo here.](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
 
 ## Research Paper Summary
 
