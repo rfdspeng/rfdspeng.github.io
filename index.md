@@ -1,10 +1,14 @@
 ---
 layout: default
-title: Home
+title: Ryan Tsai's ML and AI Portfolio
 ---
 
-This website is a work-in-progress, as are the projects.
+# Introduction
+
+[Resume]({{ site.resume }})
+
+[LinkedIn]({{ site.linkedin }})
 
 # Projects
 
-* [Histopathology Image Classification](https://rfdspeng.github.io/pages/mhist): Classify histopathology images of colorectal polyps as benign or precancerous
+* **Histopathology Image Classification**: Classify histopathology images of colorectal polyps as benign or precancerous [(view report and code)](https://rfdspeng.github.io/pages/mhist)
