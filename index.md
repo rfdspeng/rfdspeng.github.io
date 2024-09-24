@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ryan Tsai's ML and AI Portfolio
+title: Home
 ---
 
 # Introduction
