@@ -14,6 +14,8 @@ This is my first deep learning and computer vision project. I've summarized the 
 
 You can [find the code repo here.](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
 
+Libraries used: torch, torchvision, torchmetrics, timm, matplotlib, numpy, pandas
+
 ## Research Paper Summary
 
 The paper is well-written, so I'll only provide a brief overview of the dataset and objective. The authors collected histopathology images (microscopic images of the tissues used in disease analysis) of colorectal polyps and asked a board of 7 doctors to label each image as either hyperplastic polyps (HP) or sessile serrated adenomas (SSA) . HPs are benign, and SSAs are precancerous. The authors then trained various ResNet models on the dataset and reported AUC.
