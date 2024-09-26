@@ -14,7 +14,7 @@ This is my first deep learning and computer vision project. I've summarized the 
 
 You can [find the code repo here.](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
 
-Libraries used: torch, torchvision, torchmetrics, timm, matplotlib, numpy, pandas
+**Libraries used: torch, torchvision, torchmetrics, timm, matplotlib, numpy, pandas**
 
 ## Research Paper Summary
 
