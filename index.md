@@ -3,9 +3,7 @@ layout: default
 title: Home
 ---
 
-[Resume]({{ site.resume }})
-
-[LinkedIn]({{ site.linkedin }})
+**[GitHub]({{ site.github }}), [Resume]({{ site.resume }}), [LinkedIn]({{ site.linkedin }})**
 
 # *<u>Projects</u>*
 
