@@ -3,7 +3,7 @@ layout: default
 title: Histopathology Image Classification
 ---
 
-# Histopathology Image Classification
+# *<u>Histopathology Image Classification</u>*
 
 ![SSA image](../assets/image/mhist_ssa_img.jpg)
 [Image source](https://commons.wikimedia.org/wiki/File:Sessile_serrated_adenoma_3_intermed_mag.jpg)
@@ -16,7 +16,8 @@ You can [find the code repo here.](https://github.com/rfdspeng/ml_ai_portfolio/t
 
 **Libraries used: torch, torchvision, torchmetrics, timm, matplotlib, numpy, pandas**
 
-## Research Paper Summary
+<br>
+## *<u>Research Paper Summary</u>*
 
 The paper is well-written, so I'll only provide a brief overview of the dataset and objective. The authors collected histopathology images (microscopic images of the tissues used in disease analysis) of colorectal polyps and asked a board of 7 doctors to label each image as either hyperplastic polyps (HP) or sessile serrated adenomas (SSA) . HPs are benign, and SSAs are precancerous. The authors then trained various ResNet models on the dataset and reported AUC.
 
@@ -34,9 +35,10 @@ The authors found that pretraining significantly improves performance. On ResNet
 
 The authors found that removing difficult images (images where the doctors were split 3/7 or 4/7) may improve performance.
 
-## My Project Summary
+<br>
+## *<u>My Project Summary</u>*
 
-### Process
+### *<u>Process</u>*
 1.	Copied the model (ResNet-18) and training hyperparameters (learning rate and scheduler, batch size, optimizer) from the research paper
 2.	Split training set into training (80%) and validation (20%), stratified on voting count. I chose holdout validation over cross-validation to experiment more quickly.
 3.	Used early stopping on the training process triggered on validation F1 score and loaded the model state from the best epoch
@@ -46,7 +48,8 @@ The authors found that removing difficult images (images where the doctors were 
 7.	Tried ensembling with the best ResNet and ViT models
 8.	For academic purpose, tried FCNN with 4 fully-connected layers (128 neurons, 64, 32, 1). I chose these layers so the FCNN has roughly the same number of parameters as ResNet-18.
 
-### Performance
+<br>
+### *<u>Performance</u>*
 **Performance summary:**
 ![Performance summary table](../assets/image/mhist_perf_table.png)
 
@@ -55,15 +58,18 @@ First, let me explain the abbreviations in the table:
 * ROS = random oversampling
 * -difficult = removing images from the training set with 3/7 and 4/7 voting
 
-#### Research Paper Comparison
+<br>
+### *<u>Research Paper Comparison</u>*
 I was able to replicate the research paper performance for both non-pretrained and pretrained ResNet-18. See the rows for **ResNet-18, img aug**.
 ![Performance comparison to paper](../assets/image/mhist_resnet_paper.png)
 
-#### ResNet-18 Improvement
+<br>
+### *<u>ResNet-18 Improvement</u>*
 I was able to improve performance over the research paper with additional generalization techniques. See the rows for **ResNet-18, img aug, ROS, -difficult**.
 ![ResNet-18 performance](../assets/image/mhist_resnet.png)
 
-#### ViT-Base Patch 16/224 Performance
+<br>
+### *<u>ViT-Base Patch 16/224 Performance</u>*
 ViT-Base Patch 16/224 performance is similar to ResNet-18.
 ![ViT-Base Patch 16/224 performance over 10 random seeds](../assets/image/mhist_vit.png)
 ![Compare all models](../assets/image/mhist_resnet_vit_fcnn.png)

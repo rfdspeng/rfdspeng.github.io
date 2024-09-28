@@ -7,27 +7,25 @@ title: Home
 
 [LinkedIn]({{ site.linkedin }})
 
-# From Signals and Systems to Machine Learning
+# *<u>Projects</u>*
+
+* **Histopathology Image Classification (Supervised Learning)**: Classify histopathology images of colorectal polyps as benign or precancerous [(view report and code)](https://rfdspeng.github.io/pages/mhist)
+
+# *<u>Intro: From Signals and Systems to Machine Learning</u>*
 
 Hello! My name is **Ryan Tsai**, and I'm a **machine learning and AI engineering student** enrolled in the Machine Learning Engineering bootcamp at WeCloudData. I'm a **career switcher - I have 10 years of experience as a systems engineer** for commercial cellular (4G and 5G) modem chipsets at Qualcomm and at Zeku.
 
 **My previous work experience has been incredibly helpful for learning ML and doing ML projects.**
 
 **There are many shared or analogous concepts between signals and systems and machine learning:**
-* **Signals are universally represented as vectors**, and they undergo linear and nonlinear transformations through signal processing chains
-* **Convolutional filters are a basic element of signal processing chains.** Each convolutional filter in a CNN is like a matched filter in signal processing, except the weights are learned.
-* **Linear regression** is commonly used for modeling nonlinear systems (which involves feature engineering) and for designing linear filters, but the weights are found by solving the normal equation instead of gradient descent
-* A **standard RNN** is like a first-order IIR filter
-* **Positional encoding** in transformers is like how an OFDM signal maps information to sinusoids of different frequencies (orthogonal tones)
+* Signals are universally represented as vectors, and they undergo linear and nonlinear transformations through signal processing chains
+* Convolutional filters are a basic element of signal processing chains. Each convolutional filter in a CNN is like a matched filter in signal processing, except the weights are learned.
+* Linear regression is commonly used for modeling nonlinear systems (which involves feature engineering) and for designing linear filters, but the weights are found by solving the normal equation instead of gradient descent
 
-**Just like in ML, hyperparameter tuning is critical for designing filters and other signal processing blocks.** For example, when I designed an upsampling digital filter chain for the RF transmitter, I employed an iterative process to tune the filter models, filter lengths, etc. to meet target metrics like EVM and image suppression and soft targets like hardware complexity.
+**Just like in ML, hyperparameter tuning is critical for designing filters and other signal processing blocks.** For example, when I designed an upsampling digital filter chain for an RF transmitter, I employed an iterative process to tune the filter models, filter lengths, coefficient bitwidths, etc. to meet target metrics like EVM and image suppression and soft targets like hardware complexity.
 
-**Here are some of my skills, and please take a look at my [resume]({{ site.resume }}) and the projects below to see how I've applied them:**
+**Here are some of my skills**, and please take a look at my [resume]({{ site.resume }}) and my projects to see how I've applied them:
 * Programming languages: Python, MATLAB
 * Machine learning frameworks: PyTorch, Scikit-learn, TorchMetrics
 * Data analysis and visualization: SciPy, NumPy, pandas, Matplotlib
 * Tools: Git, Conda, Spyder, Jupyter
-
-# Projects
-
-* **Histopathology Image Classification (Supervised Learning)**: Classify histopathology images of colorectal polyps as benign or precancerous [(view report and code)](https://rfdspeng.github.io/pages/mhist)
