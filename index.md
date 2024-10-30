@@ -9,14 +9,17 @@ title: Home
 
 Hello! My name is **Ryan Tsai**, and I'm a **machine learning and AI engineering student** enrolled in the Machine Learning Engineering bootcamp at WeCloudData. I'm a **career switcher - I have 10 years of experience as a systems engineer** for commercial cellular (4G and 5G) modem chipsets at Qualcomm and at Zeku.
 
-**My previous work experience has been incredibly helpful for learning ML and doing ML projects.**
+[About Me (placeholder)](https://rfdspeng.github.io/pages/about_me)
+
+**My previous work experience has given me the skills and knowledge needed to successfully transition to data science and machine learning.**
 
 **There are many shared or analogous concepts between signals and systems and machine learning:**
-* Signals are universally represented as vectors, and they undergo linear and nonlinear transformations through signal processing chains
-* Convolutional filters are a basic element of signal processing chains. Each convolutional filter in a CNN is like a matched filter in signal processing, except the weights are learned.
-* Linear regression is commonly used for modeling nonlinear systems (which involves feature engineering) and for designing linear filters, but the weights are found by solving the normal equation instead of gradient descent
+* Like data, signals are represented as high-dimensional vectors, and like data passing through machine learning models, signals undergo successive linear and nonlinear transformations as they pass through signal processing chains.
+* Linear regression is a simple model in machine learning, and it's also used to design linear and nonlinear signal processing blocks. However, the weights in signal processing blocks are typically found by solving the normal equation instead of by gradient descent.
+* Just like machine learning models, signal processing blocks balance bias and variance.
+* **Most importantly, both fields - signals and systems and machine learning - require an engineer's mindset. The process of optimizing models and filters is the same - iterative testing, analysis, and adjustment based on quantitative metrics.**
 
-**Just like in ML, hyperparameter tuning is critical for designing filters and other signal processing blocks.** For example, when I designed an upsampling digital filter chain for an RF transmitter, I employed an iterative process to tune the filter models, filter lengths, coefficient bitwidths, etc. to meet target metrics like EVM and image suppression and soft targets like hardware complexity.
+[Click here for the full list of shared concepts.](https://rfdspeng.github.io/pages/signals_and_systems)
 
 **Here are some of my skills**, and please take a look at my [resume]({{ site.resume }}) and my projects to see how I've applied them:
 * Programming languages: Python, MATLAB
@@ -27,3 +30,4 @@ Hello! My name is **Ryan Tsai**, and I'm a **machine learning and AI engineering
 # <u>Projects</u>
 
 * **Histopathology Image Classification (supervised learning with CNN and vision transformer)**: Classify histopathology images of colorectal polyps as benign or precancerous [(view report and code)](https://rfdspeng.github.io/pages/mhist)
+* **Clinical Dialogue Summarization (supervised learning with Seq2Seq language model)**: [placeholder](https://rfdspeng.github.io/pages/clinical_text_summ)
