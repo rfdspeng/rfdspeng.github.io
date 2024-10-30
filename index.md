@@ -20,7 +20,7 @@ Hello! My name is **Ryan Tsai**, and I'm a **machine learning and AI engineering
 
 **Here are some of my skills**, and please take a look at my [resume]({{ site.resume }}) and my projects to see how I've applied them:
 * Programming languages: Python, MATLAB
-* Machine learning frameworks: PyTorch, Scikit-learn, TorchMetrics, CUDA
+* Machine learning frameworks: Hugging Face, PyTorch, Scikit-learn, TorchMetrics, CUDA
 * Data analysis and visualization: NumPy, pandas, Matplotlib
 * Tools: Git, Conda, Spyder, Jupyter
 
