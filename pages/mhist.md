@@ -16,6 +16,8 @@ You can [find the code repo here.](https://github.com/rfdspeng/ml_ai_portfolio/t
 
 **Libraries used: torch, torchvision, torchmetrics, timm, matplotlib, numpy, pandas**
 
+**Concepts: convolutional neural networks, vision transformers, image augmentation, class balancing, AUC, F1 score**
+
 <br>
 ## **<u>Research Paper Summary</u>**
 

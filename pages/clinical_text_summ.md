@@ -5,19 +5,25 @@ title: Clinical Dialogue Summarization
 
 # **<u>Clinical Dialogue Summarization</u>**
 
+![Header image](../assets/image/clinical_text_summ_header_image.png)
 
-**Libraries**
+<br>
+**Libraries used: transformers, datasets, peft, evaluate, torch, pandas, numpy, matplotlib, sklearn, sentence_transformers**
 
-**Concepts: LoRA**
+**Concepts: Seq2Seq language model, LoRA, BERTScore, ROUGE, SentenceTransformer, t-SNE**
 
 <br>
 ## **<u>Project Summary</u>**
+
+[Download full report](../assets/pdf/Clinical%20Dialogue%20Summarization%20Report.pdf)
+
+[Code repo](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/text_summ)
 
 For my second deep learning project, I chose to fine-tune a transformer model for text summarization. I've personally found summarization to be very useful, and I wanted to explore text generation as it's one of the most interesting and complex applications of AI.
 
 **Ultimately, the fine-tuned model does not generalize because of the small and noisy dataset, which I explain below.**
 
-**I found a [dataset](https://huggingface.co/datasets/har1/MTS_Dialogue-Clinical_Note) on Hugging Face that summarizes transcribed clinical dialogue.** It’s a modified version of this [dataset](https://github.com/abachaa/MTS-Dialog). The team that uploaded the modified dataset to Hugging Face added structure to the summaries, converting them from paragraph format to bullet-point format with 4 bullets: symptoms, diagnosis, patient history, and plan of action. The team only uploaded the training and validation splits.
+**I found a [dataset](https://huggingface.co/datasets/har1/MTS_Dialogue-Clinical_Note) on Hugging Face that summarizes transcribed clinical dialogue.** It’s a modified version of [this dataset](https://github.com/abachaa/MTS-Dialog). The team that uploaded the modified dataset to Hugging Face added structure to the summaries, converting them from paragraph format to bullet-point format with 4 bullets: symptoms, diagnosis, patient history, and plan of action. The team only uploaded the training and validation splits.
 
 The original dataset was intended for training both summarization and classification into medical categories, but for simplicity, I only attempted summarization.
 
@@ -37,7 +43,7 @@ The team that uploaded the dataset fine-tuned “facebook/bart-large-cnn”, but
 <br>
 ## **<u>Training and Validation Loss</u>**
 
-The plots below summarize the training results: I can achieve good training performance by either unfreezing layers in the base model or applying high-rank LoRA adaptation, but **regularization degrades both training and validation performance.**
+The plots below summarize the training results: I can achieve good training performance by either unfreezing layers in the base model or applying LoRA with a relatively high rank, but **regularization degrades both training and validation performance.**
 
 Model configurations (top to bottom in the legend):
 1. LoRA (r = 512, alpha = 512, dropout = 0), effective batch size = 8, initial learning rate = 8e-4, StepLR(step_size = 1, gamma = 0.999)
@@ -116,6 +122,50 @@ It's not just BERTScore and ROUGE - the model hallucinates. Take **209** for exa
 **The ground truth summary contains information not present in the dialogue (noisy dataset).**
 
 <br>
-### **<u>Samples Without Information, Noise</u>**
+### **<u>Noisy Samples and Samples Without Information</u>**
 
+While investigating the dataset, I found noisy samples and samples without information.
 
+**For example, the dialogue in training sample ID 931 is about a fracture, but the summary is about heart problems.**
+
+>Doctor: Hello. How are you all doing today?  
+>Guest_family: We're doing fine. I'm the mother of my four year old boy.  
+>Doctor: Hello, ma'am. What seems to be the problem?  
+>Gest_family: We just wanted to follow up after my son's E R visit.  
+>Doctor: Oh, no. What happened?  
+>Guest_family: He was playing at the park and thought it was a good idea to jump off the swing. Crazy kid, right?   
+>Doctor: It happens. Live and you learn, as they say. Do you have any information from the E R visit.  
+>Guest_family: I gave it to the nurse. Did you not get it?  
+>Guest_clinician: Sorry. I got really busy, but here is the report.   
+>Doctor: Could you read it to me, please?  
+>Guest_clinician: Of course. So, **their son severely injured his left distal humerus**. No problems were claimed before the injury. **The E R saw him for his deformed elbow.**  
+>Doctor: Are there any exams on the report?   
+>Guest_clinician: There is an x ray and physical exam. They both confirmed a closed type three supracondylar fracture of his left distal humerus with severe puckering of the skin anteriorly with major ecchymosis in the same region. He did have a radial pulse palpable  
+>Doctor: Thank you, nurse. Mom, were you there before his surgery?  
+>Guest_family: My husband and I were. My husband rushed from this cultural event he had planned.  
+>Doctor: I see. What do you all identify as?  
+>Guest_family: We identify as white.  
+>Doctor: I see. I'm going to perform a neurological exam on your son now. Hi buddy. Is it fine if I do a quick exam?  
+>Patient: Sure.  
+>Doctor: Thanks. It'll be quick.   
+>Patient: Okay.  
+>Doctor: After doing the exam I see his ulnar, median, and radial nerves are intact. I couldn't do the entire exam because the pain might be too much for him.  
+>Guest_family: Thank you so much for your help.  
+
+>Symptoms: N/A  
+>Diagnosis: N/A  
+>History of Patient: patient had **cardioversion for atrial fibrillation**, taking Coumadin, history of smoking but quit several years ago, denies COPD or emphysema, no family members are sick  
+>Plan of Action: N/A  
+
+**Training sample ID 219 contains almost no information.**
+
+>Doctor: So, I am looking at his x ray and it does not show any open fracture or any kind of bone abnormality.  
+>Guest_family: Okay, I was really worried about my son.  
+>Doctor: I understand, but like I said, I didn't see any open fracture in his x ray report nor any abnormality.  
+>Guest_family: Okay.  
+
+>Symptoms: N/A  
+>Diagnosis: N/A  
+>History of Patient: N/A  
+>Plan of Action: N/A  
+>.
