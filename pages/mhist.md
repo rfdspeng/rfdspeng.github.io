@@ -10,13 +10,21 @@ title: Histopathology Image Classification
 
 [Original paper - A Petri Dish for Histopathology Image Analysis (2021)](https://arxiv.org/abs/2101.12355)
 
-This is my first deep learning and computer vision project. I've summarized the project below, and you can [download my full report here.](../assets/pdf/MHIST%20Project%20Report.pdf)
-
-You can [find the code repo here.](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
-
 **Libraries used: torch, torchvision, torchmetrics, timm, matplotlib, numpy, pandas**
 
-**Concepts: convolutional neural networks, vision transformers, image augmentation, class balancing, AUC, F1 score**
+**Concepts: image preprocessing, convolutional neural networks, vision transformers, hyperparameter tuning, early stopping, image augmentation, transfer learning, class balancing, AUC, F1 score**
+
+<br>
+## **<u>Abstract</u>**
+
+[Download full report](../assets/pdf/MHIST%20Project%20Report.pdf)
+
+[Code repo](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
+
+This is my first deep learning project. The objective of this project is to classify histopathology images as precancerous or benign. The dataset consists of 3152 histopathology images of colorectal polyps annotated by a board of 7 doctors. The researchers that created the dataset published a [paper](https://arxiv.org/abs/2101.12355) explaining how they trained ResNet models on this dataset for classification, so I used their hyperparameters as my starting point for training ResNet-18. I found that ResNet-18 overfits, so I applied geometric image augmentations - flipping, rotation, perspective, and affine - to improve generalization. I applied transfer learning, and I also applied different resampling techniques to balance the classes, including pseudo-versions of SMOTE, ADASYN, and TomekLinks. Using the best image augmentation and resampling techniques from my ResNet-18 experiments, I experimented with hyperparameter tuning (learning rate, effective batch size, dropout, weight decay) for a vision transformer model, ViT-Base Patch 16/224. On the test split, I achieved better performance than the research paper with both models:
+* Research paper, ResNet-18: AUC = 92.7
+* ResNet-18: AUC = 94.2
+* Vit-Base Patch 16/224: AUC = 94.8
 
 <br>
 ## **<u>Research Paper Summary</u>**
