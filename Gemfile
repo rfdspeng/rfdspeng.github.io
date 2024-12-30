@@ -1,10 +1,7 @@
-source "https://rubygems.org"
-
-#gem "jekyll", "~> 4.3.3"  # Adjust version as needed
-gem "webrick", "~> 1.8"
-gem "jekyll-theme-minimal"
-gem "logger"
-gem "csv"
-gem "ostruct"
-gem "base64"
-gem "github-pages", group: :jekyll_plugins
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'rack', '~> 2.2.4'
+gem 'rspec'
+gem "webrick", "~> 1.9"
+gem "jekyll"
+gem "minima"
