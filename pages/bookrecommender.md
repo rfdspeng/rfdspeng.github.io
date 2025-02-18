@@ -1,11 +1,11 @@
 ---
 layout: default
-title: RAG Book Recommender
+title: RAG Book Recommendation Chatbot
 ---
 
-# <u>RAG Book Recommender Project</u>
+# <u>RAG Book Recommendation Chatbot</u>
 
-For the third and final module (MLOps) of my bootcamp, I created a RAG book recommender. The user posts a message to the application, the message is embedded and used to retrieve books from a vector database, and the message and retrieved books are passed to the chat completion model, which generates a response that is sent back to the user.
+For the third and final module (MLOps) of my bootcamp, I created a RAG book recommendation chatbot. The user posts a message to the application, the message is embedded and used to retrieve books from a vector database, and the message and retrieved books are passed to the chat completion model, which generates a response that is sent back to the user.
 
 [Code repo](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/book_recommender)
 

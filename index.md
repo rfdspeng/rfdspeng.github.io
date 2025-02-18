@@ -25,4 +25,4 @@ Hello! My name is **Ryan Tsai**, and I'm a **machine learning and AI engineering
 
 * **Histopathology Image Classification (supervised learning with CNN and vision transformer)**: Classify histopathology images of colorectal polyps as benign or precancerous [(view report and code)](https://rfdspeng.github.io/pages/mhist)
 * **Clinical Dialogue Summarization (supervised fine-tuning with Seq2Seq language model)**: Summarize clinician-patient dialogue into easy-to-read bullet-point format [(view report and code)](https://rfdspeng.github.io/pages/clinical_text_summ)
-* **RAG Book Recommender** with FastAPI backend, Streamlit frontend, Qdrant vector database for retrieval, and OpenAI text embedding and chat completion. [(view report and code)](https://rfdspeng.github.io/pages/bookrecommender)
+* **RAG Book Recommendation Chatbot** with FastAPI backend, Qdrant for vector search, and OpenAI for text embedding and chat completion. [(view report and code)](https://rfdspeng.github.io/pages/bookrecommender)
