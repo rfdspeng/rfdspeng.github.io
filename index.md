@@ -11,7 +11,7 @@ title: Home
 
 # <u>From Signals and Systems to Machine Learning</u>
 
-Hello! My name is **Ryan Tsai**, and I'm currently working as a data science consultant at [Beam Data](https://beamdata.ai/) after finishing the Machine Learning Engineering Program at [WeCloudData](https://weclouddata.com/). I worked as an RF hardware engineer, an RF systems engineer, and a modem systems engineer at Qualcomm for 10 years before deciding to switch careers.
+Hello! My name is **Ryan Tsai**, and I'm currently working as a data science consultant at [Beam Data](https://beamdata.ai/) after completing the Machine Learning Engineering Program at [WeCloudData](https://weclouddata.com/). This is my biggest career switch, moving from cellular chipsets and signal processing into machine learning, but it's not my first time changing fields. I began my career in RF hardware (PCB design, phone-level testing and integration), then self-studied to move into RF systems (RF system specifications and algorithms), and later self-studied again to move into modem systems (digital transceiver filter design and analog impairment compensation algorithms). Along the way, I learned to program in MATLAB and Python, which I now use every day in machine learning.
 
 I've noticed many parallels between signals and systems - my previous field - and machine learning:
 * Like data, signals are represented as high-dimensional vectors, and like data passing through machine learning models, signals undergo successive linear and nonlinear transformations as they pass through signal processing chains.
