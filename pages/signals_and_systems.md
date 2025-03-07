@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Signals and Systems and Machine Learning
+title: Signals, Systems, and Machine Learning
 ---
 
 # <u>Shared Concepts Between Signals and Systems and Machine Learning</u>
@@ -16,4 +16,3 @@ title: Signals and Systems and Machine Learning
 * Hyperparameter tuning is used to improve machine learning models. It's also used in filter design to balance performance with hardware and software complexity. For example, for a simple lowpass filter, you can tune the cutoff frequency, the number of taps, and the bitwidth. If you want your filter to support multiple configurations, then you need software control logic. If you need dynamic programming, then you need both software and hardware support.
 * Convolutional filters are a basic element of signal processing chains. Each convolutional filter in a CNN is like a matched filter in signal processing, except the weights are learned.
 * Positional encoding in transformers map global information to slow sinusoids and local information to fast sinusoids. An OFDM waveform maps data (bits) to sinusoids of different frequencies.
-* **Most importantly, both fields - signals and systems and machine learning - require an engineer's mindset. The process of optimizing models and filters is the same - iterative testing, analysis, and adjustment based on quantitative metrics.**
