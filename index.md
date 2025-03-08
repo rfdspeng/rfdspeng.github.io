@@ -23,12 +23,12 @@ I've noticed many parallels between signals and systems - my previous field - an
 
 # <u>Projects</u>
 
-* **RAG Book Recommendation Chatbot** [(repo)](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/book_recommender)
+* **[RAG Book Recommendation Chatbot](https://rfdspeng.github.io/pages/bookrecommender)** [(repo)](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/book_recommender)
     * Indexed Goodreads book summaries into Qdrant vector database with OpenAI for text embedding
     * Developed FastAPI chatbot application with Qdrant vector search and OpenAI chat completion
     * Deployed containerized application to AWS EC2
-* **Clinical Dialogue Summarization (supervised fine-tuning with Seq2Seq language model)** [(repo)](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/text_summ)
+* **[Clinical Dialogue Summarization](https://rfdspeng.github.io/pages/clinical_text_summ) (supervised fine-tuning with Seq2Seq language model)** [(repo)](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/text_summ)
     * Fine-tuned BART model, using low-rank adaptation, to summarize clinical dialogues, achieving 97% ROUGE-L on the training data but only 47% on the validation data.
     * Analyzed the dataset by embedding the dialogues and proved that the dataset is too small and noisy for generalization.
-* **Histopathology Image Classification (supervised learning with CNN and vision transformer)** [(repo)](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
+* **[Histopathology Image Classification](https://rfdspeng.github.io/pages/mhist) (supervised learning with CNN and vision transformer)** [(repo)](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/mhist)
     * Employed image augmentation, class balancing, and transfer learning to achieve an AUC of 94.2% with ResNet-18 and 94.8% with ViT-Base on the test dataset, outperforming the research paper’s AUC of 92.7%.
