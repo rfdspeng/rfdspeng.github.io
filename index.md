@@ -23,6 +23,8 @@ I've noticed many parallels between signals and systems - my previous field - an
 
 # <u>Projects</u>
 
+* **[Indexing and LLM-Based Content Tagging Pipeline](https://rfdspeng.github.io/pages/content_tagging)** [(repo)](https://github.com/rfdspeng/content-tagging-pipeline)
+    * Designed and implemented an indexing and LLM-based content tagging pipeline for data science educational materials. Designed the database, chunking strategy, and the few-shot prompt for tagging, including a tag-averaging strategy to filter noisy tags and improve recall. Labeled the training datasets, with LLM assistance, to evaluate tagging performance, and achieved 93.8% recall and 78.4% precision. Created shell scripts to streamline deployment to AWS Lambda.
 * **[RAG Book Recommendation Chatbot](https://rfdspeng.github.io/pages/bookrecommender)** [(repo)](https://github.com/rfdspeng/ml_ai_portfolio/tree/main/book_recommender)
     * Indexed Goodreads book summaries into Qdrant vector database with OpenAI for text embedding
     * Developed FastAPI chatbot application with Qdrant vector search and OpenAI chat completion
