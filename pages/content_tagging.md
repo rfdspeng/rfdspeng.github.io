@@ -98,11 +98,11 @@ Consistency level is set to `"Strong"` to ensure that database searches use the 
 
 # <u>Indexing+tagging pipeline</u>
 
-## <u>_Diagram_</u>
+## _<u>Diagram</u>_
 
-![Pipeline diagram](./assets/images/content_tagging_index_pipe.png)
+![Pipeline diagram](../assets/image/content_tagging_index_pipe.png)
 
-## <u>_File conversion_</u>
+## _<u>File conversion</u>_
 
 The pipeline starts by converting files to Haystack `Documents`. The pipeline routes to different converters based on MIME type:
 
@@ -115,11 +115,11 @@ The pipeline starts by converting files to Haystack `Documents`. The pipeline ro
 
 **Important note:** Video transcripts are generally not a good format for this application. There is a lot of noise/filler/useless information in transcripts, and even the useful information is not very useful without the video.
 
-## <u>_Cleaning (Optional)_</u>
+## _<u>Cleaning (Optional)</u>_
 
 Cleaning (Haystack's `DocumentCleaner`) is optional. It strips extra whitespaces and newlines, which can cause the text to lose structure. This makes it difficult to read the text and may be detrimental to generation in the RAG pipeline.
 
-## <u>_Splitting_</u>
+## _<u>Splitting</u>_
 
 `splitter` supports fixed and recursive chunking via Haystack's `DocumentSplitter` and `RecursiveDocumentSplitter`. Pass the splitting options as a dictionary.
 
@@ -153,19 +153,19 @@ splitting_options = {
 
 ### **<u>Sample chunk length histograms</u>**
 
-![Jupyter notebook chunk length histogram](./assets/images/content_tagging_jupyter_notebook_chunk_lengths.png)
+![Jupyter notebook chunk length histogram](../assets/image/content_tagging_jupyter_notebook_chunk_lengths.png)
 
-![Powerpoint chunk length histogram](./assets/images/content_tagging_powerpoint_chunk_lengths.png)
+![Powerpoint chunk length histogram](../assets/image/content_tagging_powerpoint_chunk_lengths.png)
 
-## <u>_Metadata normalization_</u>
+## _<u>Metadata normalization</u>_
 
 `metadata_cleaner` normalizes metadata after splitting. Its main purpose is to move all metadata into a dictionary under the key `"metadata"` to prepare for insertion into the vector database. The pipeline was not able to insert into the vector database without this change.
 
-## <u>_Embedding_</u>
+## _<u>Embedding</u>_
 
 `embedder` uses default options. The model is `sentence-transformers/all-mpnet-base-v2` with a max input length of 384 tokens and an embedding dimension of 768.
 
-## <u>_Tagging_</u>
+## _<u>Tagging</u>_
 
 After embedding, the pipeline routes to two branches based on file type. Each branch has its own tagger. `ipynb_tagger` is for tagging Jupyter notebooks, while `tagger` is for all other file types. The reason is because the LLM tagger performs better for Jupyter notebooks when you tell it that the text chunk is from a Jupyter notebook that has been converted to Markdown. Did not test this for other file types.
 
@@ -183,7 +183,7 @@ Untagged chunks (chunks with empty tag lists) can be handled in one of three way
 2. Discard untagged chunks (because they don't contain much information)
 3. Keep and tag the untagged chunks
 
-## <u>_Duplicate checking_</u>
+## _<u>Duplicate checking</u>_
 
 This component checks if the input `Document` IDs already exist in the vector database. Configuration options:
 1. `delete`: Default option. Delete duplicate IDs from the vector database. All `Document`s will be inserted into the vector database.
@@ -225,7 +225,7 @@ splitting_options = {
 }
 ```
 
-## <u>_Lambda function implementation notes_</u>
+## _<u>Lambda function implementation notes</u>_
 
 On cold start,
 * Embedder files are cached to `/tmp/`
